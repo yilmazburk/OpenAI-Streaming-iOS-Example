@@ -128,7 +128,7 @@ struct ChatRequest: Encodable {
         let content: String
     }
     
-    var model = "gpt-4o-mini"
+    var model = "gpt-4.1-nano"
     let messages: [Message]
     let stream = true
 }

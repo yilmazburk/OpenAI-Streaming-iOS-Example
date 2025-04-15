@@ -18,7 +18,7 @@ final class ViewController: UIViewController {
         textView.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         textView.textColor = .darkGray
         textView.isEditable = false
-        textView.text = "Hello! How can I assist you today?"
+        textView.text = "Ask anything to the 4.1 nano."
         
         textField = UITextField(frame: .zero)
         textField.font = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -26,14 +26,14 @@ final class ViewController: UIViewController {
         textField.clearButtonMode = .whileEditing
         textField.returnKeyType = .send
         textField.placeholder = "Type anything here."
-        networkManager = NetworkManager(apikey: "YOUR-OPENAI-SECRETKEY", delegate: self)
+        networkManager = NetworkManager(apikey: "YOUR-API-KEY", delegate: self)
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        title = "Servant"
+        title = "OpenAI API"
         navigationController?.navigationBar.prefersLargeTitles = true
         
         view.addSubview(textView)
